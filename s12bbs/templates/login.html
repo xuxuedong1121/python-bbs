@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block page-container %}
+<form action="" method="post">{% csrf_token %}
+username:<input type="text" name="username">
+password:<input type="password" name="password">
+<input type="submit" value="登录">
+<div>
+    {% if loin_err %}
+    <p style="color: red">{{ loin_err }}</p>
+    {% endif %}
+</div>
+</form>
+{% endblock %}
